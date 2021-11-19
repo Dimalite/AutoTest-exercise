@@ -1,0 +1,260 @@
+{
+  "stats": {
+    "suites": 5,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-11-19T12:37:35.542Z",
+    "end": "2021-11-19T12:37:52.500Z",
+    "duration": 16958,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "28dcafa9-4683-457a-a9a7-f2a265e73da4",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1e246b73-8985-4ac1-ae43-b620aae224f4",
+          "title": "Checking login page",
+          "fullFile": "C:\\Users\\dima\\Desktop\\Test exercise\\test\\fifth.js",
+          "file": "\\test\\fifth.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Please enter username.",
+              "fullTitle": "Checking login page Please enter username.",
+              "timedOut": null,
+              "duration": 7981,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"firefox\").build();\n    await driver.get(\"https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php\");\n    \n    \n    await driver.findElement(By.className(\"btn\")).sendKeys(Key.RETURN);\n    \n    let message = await driver.findElement(By.xpath(\"/html/body/div/div/form/div[1]/span\")).getAttribute(\"value\").then(function (value) {\n      return value;\n    });\n    assert.strictEqual(message, \"Please enter username.\");\n    // message.should.equal(\"Please enter username.\");\n    // await driver.takeScreenshot().then(\n    //   function (image) {\n    //     require('fs').writeFileSync('./screenshot_test5.png', image, 'base64')\n    //   });\n    await driver.quit();",
+              "err": {
+                "message": "AssertionError: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'Please enter username.'",
+                "estack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ null\n- 'Please enter username.'\n    at Context.<anonymous> (test\\fifth.js:24:12)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)",
+                "diff": null
+              },
+              "uuid": "0057fbe7-5678-46b3-a7b0-6008d6faa997",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "0057fbe7-5678-46b3-a7b0-6008d6faa997"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7981,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "3e62fee0-e9e0-40d8-be66-05d4bde79773",
+          "title": "Checking login page",
+          "fullFile": "C:\\Users\\dima\\Desktop\\Test exercise\\test\\first.js",
+          "file": "\\test\\first.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Open the page",
+              "fullTitle": "Checking login page Open the page",
+              "timedOut": null,
+              "duration": 9070,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"firefox\").build();\n    await driver.get(\"https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php\");\n    await driver.quit();",
+              "err": {},
+              "uuid": "160728de-2ff1-4278-9fca-0ea37c38baad",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "160728de-2ff1-4278-9fca-0ea37c38baad"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9070,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "4a229cf1-c262-4f8e-8005-c3c1eafc2707",
+          "title": "Checking login page",
+          "fullFile": "C:\\Users\\dima\\Desktop\\Test exercise\\test\\fourth.js",
+          "file": "\\test\\fourth.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "The presence of elements on the page.",
+              "fullTitle": "Checking login page The presence of elements on the page.",
+              "timedOut": null,
+              "duration": 9445,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"firefox\").build();\nawait driver.get(\"https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php\");\ntry {\n  \n  let inputs = await driver.findElements(By.className('form-control'));\n} catch (err) {\n  console.log(err)\n} finally {\n  await driver.quit();\n}\n// await driver.takeScreenshot().then(\n//   function (image) {\n//     require('fs').writeFileSync('./screenshot_test4.png', image, 'base64')\n//   });",
+              "err": {},
+              "uuid": "4eddeef8-be6b-4765-80d3-75afba4f984c",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "4eddeef8-be6b-4765-80d3-75afba4f984c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9445,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "8cef748e-64f8-457c-bf38-f99e77ce6074",
+          "title": "Checking login page",
+          "fullFile": "C:\\Users\\dima\\Desktop\\Test exercise\\test\\second.js",
+          "file": "\\test\\second.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Credential values.",
+              "fullTitle": "Checking login page Credential values.",
+              "timedOut": null,
+              "duration": 7422,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"firefox\").build();\n    await driver.get(\"https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php\");\n    let inputName = await driver.findElement(By.name(\"username\")).getAttribute(\"value\");\n    let inputPassword = await driver.findElement(By.name(\"password\")).getAttribute(\"value\");\n    await driver.quit();",
+              "err": {},
+              "uuid": "feebf263-281e-42c4-8071-68d5b1abedf9",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "feebf263-281e-42c4-8071-68d5b1abedf9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7422,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "af70832d-cafe-4b9b-8583-c03d8ef70174",
+          "title": "Checking login page",
+          "fullFile": "C:\\Users\\dima\\Desktop\\Test exercise\\test\\third.js",
+          "file": "\\test\\third.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Filling in input fields",
+              "fullTitle": "Checking login page Filling in input fields",
+              "timedOut": null,
+              "duration": 7194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "let driver = await new Builder().forBrowser(\"firefox\").build();\n    await driver.get(\"https://www.pecodesoftware.com/qa-portal/registerlogin/registerlogin.php\");\n    driver.findElement(By.name(\"username\")).clear();\n    driver.findElement(By.name(\"password\")).clear();\n    await driver.findElement(By.name(\"username\")).sendKeys(\"admin\");\n    await driver.findElement(By.name(\"password\")).sendKeys(\"12345\");\n    await driver.findElement(By.className(\"btn\")).sendKeys(Key.RETURN);\n    await driver.quit();",
+              "err": {},
+              "uuid": "fb661afa-63cb-4ecc-88a7-870dec50f4a4",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "fb661afa-63cb-4ecc-88a7-870dec50f4a4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 7194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "9.1.3"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.0.1"
+    }
+  }
+}
